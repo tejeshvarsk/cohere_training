@@ -1,0 +1,40 @@
+Parameter Name,Parameter Value
+Respiratory rate,10
+Altered mentation,20
+Systolic blood pressure,30
+Oxygen saturation,50
+Pulse rate,70
+Level of consciousness,80
+Temperature,90
+Fever,yes
+Headache,no
+Altered sensorium,yes
+Dyspnoea,no
+Chest pain,yes
+Cough,no
+Productive sputum,yes
+Vomiting,no
+Loose stools,yes
+Pain abdomen,no
+Local swelling,yes
+Wound/ulcer,no
+Dysuria,yes
+Chills,no
+Urgency to micturate,yes
+Allergies,yes
+Co-morbidities,Test
+Diabetes mellitus,yes
+Hypertension,no
+Bronchial asthma,yes
+COPD,no
+Tuberculosis,yes
+Ischemic heart disease,no
+Chronic kidney disease,yes
+Rheumatic heart disease,yes
+Prior surgery,yes
+Recent hospitalization for similar complaint,no
+Prolonged hospitalization,yes
+Previous Intubations,no
+Smoking,yes
+Alcohol,no
+Recreational drugs,yes

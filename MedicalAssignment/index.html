@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Medical Assignment</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+  <h1 class="text-center">Welcome to the Medical Assignment</h1>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#" style="font-size: 30px;">Medical Assignment</a>
+    </div>
+  </nav>
+  <div class="container mt-5">
+    <ul class="nav nav-tabs" id="myTab" role="tablist">
+      <li class="nav-item" role="presentation">
+        <a class="nav-link active" id="enter-details-tab" data-bs-toggle="tab" href="#enter-details" role="tab"
+          aria-controls="enter-details" aria-selected="true">Enter Details</a>
+      </li>
+      <li class="nav-item" role="presentation">
+        <a class="nav-link" id="view-details-tab" data-bs-toggle="tab" href="#view-details" role="tab"
+          aria-controls="view-details" aria-selected="false">View Details</a>
+      </li>
+    </ul>
+    <div class="tab-content" id="myTabContent">
+      <div class="tab-pane fade show active" id="enter-details" role="tabpanel" aria-labelledby="enter-details-tab">
+        <!--  add a fieldset with legend value "qSOFA" and inside the fieldset, bootstrap grid with 3 rows and 1 column for small screens, and 1 row and 3 columns for medium and above with each of the cells containing the following fields : number field named "Respiratory rate", number field named "Altered mentation", number field named "Systolic blood pressure" respectively -->
+        <fieldset>
+          <legend>qSOFA</legend>
+          <div class="row">
+            <div class="col-sm-12 col-md-4">
+              <label for="respiratory-rate">Respiratory rate</label>
+              <input type="number" id="respiratory-rate" class="form-control">
+            </div>
+            <div class="col-sm-12 col-md-4">
+              <label for="altered-mentation">Altered mentation</label>
+              <input type="number" id="altered-mentation" class="form-control">
+            </div>
+            <div class="col-sm-12 col-md-4">
+              <label for="systolic-blood-pressure">Systolic blood pressure</label>
+              <input type="number" id="systolic-blood-pressure" class="form-control">
+            </div>
+          </div>
+        </fieldset>
+        <!-- add a fieldset with legend value "NEWS" and inside the fieldset, bootstrap grid with 6 rows and 1 column for small screens, and 2 row and 3 columns for medium and above with each of the cells containing the following fields  : number field named "Respiratory rate", number field named "Oxygen saturation", number field named "Systolic blood pressure", number field named "Pulse rate", text field named "Level of consciousness",  number field named "Temperature" respectively-->
+        <fieldset>
+          <legend>NEWS</legend>
+          <div class="row">
+            <div class="col-sm-12 col-md-4">
+              <label for="respiratory-rate">Respiratory rate</label>
+              <input type="number" id="respiratory-rate" class="form-control">
+            </div>
+            <div class="col-sm-12 col-md-4">
+              <label for="oxygen-saturation">Oxygen saturation</label>
+              <input type="number" id="oxygen-saturation" class="form-control">
+            </div>
+            <div class="col-sm-12 col-md-4">
+              <label for="systolic-blood-pressure">Systolic blood pressure</label>
+              <input type="number" id="systolic-blood-pressure" class="form-control">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-12 col-md-4">
+              <label for="pulse-rate">Pulse rate</label>
+              <input type="number" id="pulse-rate" class="form-control">
+            </div>
+            <div class="col-sm-12 col-md-4">
+              <label for="level-of-consciousness">Level of consciousness</label>
+              <input type="text" id="level-of-consciousness" class="form-control">
+            </div>
+            <div class="col-sm-12 col-md-4">
+              <label for="temperature">Temperature</label>
+              <input type="number" id="temperature" class="form-control">
+            </div>
+          </div>
+        </fieldset>
+        <!-- add a fieldset with legend value "Present illness-Symptoms and signs specific to an infectious source" and inside the fieldset, bootstrap grid with 16 rows and 1 column for small screens, and 6 row and 3 columns for medium and above with each of the cells containing the following fields : yes or no field named "Fever", yes or no field named "Headache", yes or no field named "Altered sensorium", yes or no field named "Dyspnoea", yes or no field named "Chest pain", yes or no field named "Cough", yes or no field named "Productive sputum", yes or no field named "Vomiting", yes or no field named "Loose stools", yes or no field named "Pain abdomen", yes or no field named "Local swelling", yes or no field named "Wound/ulcer", yes or no field named "Dysuria", yes or no field named "Chills", yes or no field named "Urgency to micturate", free text field named "Others", respectively-->
+        <fieldset>
+          <legend>Present illness-Symptoms and signs specific to an infectious source</legend>
+          <div class="row">
+            <div class="col-sm-12 col-md-4">
+              <label for="fever">Fever</label>
+              <select id="fever" class="form-select">
+                <option value="">Select...</option>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+              </select>
+            </div>
+            <div class="col-sm-12 col-md-4">
+              <label for="headache">Headache</label>
+              <select id="headache" class="form-select">
+                <option value="">Select...</option>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+              </select>
+            </div>
+            <div class="col-sm-12 col-md-4">
+              <label for="altered-sensorium">Altered sensorium</label>
+              <select id="altered-sensorium" class="form-select">
+                <option value="">Select...</option>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+              </select>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-12 col-md-4">
+              <label for="dyspnoea">Dyspnoea</label>
+              <select id="dyspnoea" class="form-select">
+                <option value="">Select...</option>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+              </select>
+            </div>
+            <div class="col-sm-12 col-md-4">
+              <label for="chest-pain">Chest pain</label>
+              <select id="chest-pain" class="form-select">
+                <option value="">Select...</option>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+              </select>
+            </div>
+            <div class="col-sm-12 col-md-4">
+              <label for="cough">Cough</label>
+              <select id="cough" class="form-select">
+                <option value="">Select...</option>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+              </select>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-12 col-md-4">
+              <label for="productive-sputum">Productive sputum</label>
+              <select id="productive-sputum" class="form-select">
+                <option value="">Select...</option>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+              </select>
+            </div>
+            <div class="col-sm-12 col-md-4">
+              <label for="vomiting">Vomiting</label>
+              <select id="vomiting" class="form-select">
+                <option value="">Select...</option>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+              </select>
+            </div>
+            <div class="col-sm-12 col-md-4">
+              <label for="loose-stools">Loose stools</label>
+              <select id="loose-stools" class="form-select">
+                <option value="">Select...</option>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+              </select>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-12 col-md-4">
+              <label for="pain-abdomen">Pain abdomen</label>
+              <select id="pain-abdomen" class="form-select">
+                <option value="">Select...</option>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+              </select>
+            </div>
+            <div class="col-sm-12 col-md-4">
+              <label for="local-swelling">Local swelling</label>
+              <select id="local-swelling" class="form-select">
+                <option value="">Select...</option>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+              </select>
+            </div>
+            <div class="col-sm-12 col-md-4">
+              <label for="wound-ulcer">Wound/ulcer</label>
+              <select id="wound-ulcer" class="form-select">
+                <option value="">Select...</option>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+              </select>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-12 col-md-4">
+              <label for="dysuria">Dysuria</label>
+              <select id="dysuria" class="form-select">
+                <option value="">Select...</option>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+              </select>
+            </div>
+            <div class="col-sm-12 col-md-4">
+              <label for="chills">Chills</label>
+              <select id="chills" class="form-select">
+                <option value="">Select...</option>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+              </select>
+            </div>
+            <div class="col-sm-12 col-md-4">
+              <label for="urgency-to-micturate">Urgency to micturate</label>
+              <select id="urgency-to-micturate" class="form-select">
+                <option value="">Select...</option>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+              </select>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-12 col-md-12">
+              <label for="others">Others</label>
+              <textarea rows="4" cols="50" id="others" class="form-control"></textarea>
+            </div>
+          </div>
+        </fieldset>
+        <!-- add a fieldset with legend value "History" and inside the fieldset, bootstrap grid with 14 rows and 1 column for small screens, and 5 row and 3 columns for medium and above, with each of the cells containing the following fields : yes or no field named "Allergies", text field named "Co-morbidities", yes or no field named "Diabetes mellitus", yes or no field named "Hypertension", yes or no field named "Bronchial asthma", yes or no field named "COPD", yes or no field named "Tuberculosis", yes or no field named "Ischemic heart disease", yes or no field named "Chronic kidney disease", yes or no field named "Chronic liver disease", yes or no field named "Cancer", yes or no field named "Cerebrovascular accident", yes or no field named "Rheumatic heart disease", free text field named "Others", respectively-->
+        <fieldset>
+          <legend>History</legend>
+          <div class="row">
+            <div class="col-sm-12 col-md-4">
+              <label for="allergies">Allergies</label>
+              <select id="allergies" class="form-control">
+                <option value="">Select...</option>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+              </select>
+            </div>
+            <div class="col-sm-12 col-md-4">
+              <label for="co-morbidities">Co-morbidities</label>
+              <input type="text" id="co-morbidities" class="form-control">
+            </div>
+            <div class="col-sm-12 col-md-4">
+              <label for="diabetes-mellitus">Diabetes mellitus</label>
+              <select id="diabetes-mellitus" class="form-control">
+                <option value="">Select...</option>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+              </select>
+            </div>
+          </div>
+          <!-- Continue from the previous fields -->
+          <div class="row">
+            <div class="col-sm-12 col-md-4">
+              <label for="hypertension">Hypertension</label>
+              <select id="hypertension" class="form-control">
+                <option value="">Select...</option>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+              </select>
+            </div>
+            <div class="col-sm-12 col-md-4">
+              <label for="bronchial-asthma">Bronchial asthma</label>
+              <select id="bronchial-asthma" class="form-control">
+                <option value="">Select...</option>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+              </select>
+            </div>
+            <div class="col-sm-12 col-md-4">
+              <label for="copd">COPD</label>
+              <select id="copd" class="form-control">
+                <option value="">Select...</option>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+              </select>
+            </div>
+          </div>
+          <!-- Continue from the previous fields -->
+          <div class="row">
+            <div class="col-sm-12 col-md-4">
+              <label for="tuberculosis">Tuberculosis</label>
+              <select id="tuberculosis" class="form-control">
+                <option value="">Select...</option>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+              </select>
+            </div>
+            <div class="col-sm-12 col-md-4">
+              <label for="ischemic-heart-disease">Ischemic heart disease</label>
+              <select id="ischemic-heart-disease" class="form-control">
+                <option value="">Select...</option>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+              </select>
+            </div>
+            <div class="col-sm-12 col-md-4">
+              <label for="chronic-kidney-disease">Chronic kidney disease</label>
+              <select id="chronic-kidney-disease" class="form-control">
+                <option value="">Select...</option>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+              </select>
+            </div>
+          </div>
+          <!-- Continue from the previous fields -->
+          <div class="row">
+            <div class="col-sm-12 col-md-4">
+              <label for="tuberculosis">Tuberculosis</label>
+              <select id="tuberculosis" class="form-control">
+                <option value="">Select...</option>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+              </select>
+            </div>
+            <div class="col-sm-12 col-md-4">
+              <label for="ischemic-heart-disease">Ischemic heart disease</label>
+              <select id="ischemic-heart-disease" class="form-control">
+                <option value="">Select...</option>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+              </select>
+            </div>
+            <div class="col-sm-12 col-md-4">
+              <label for="chronic-kidney-disease">Chronic kidney disease</label>
+              <select id="chronic-kidney-disease" class="form-control">
+                <option value="">Select...</option>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+              </select>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-12 col-md-4">
+              <label for="rheumatic-heart-disease">Rheumatic heart disease</label>
+              <select id="rheumatic-heart-disease" class="form-control">
+                <option value="">Select...</option>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+              </select>
+            </div>
+            <div class="col-sm-12 col-md-8">
+              <label for="others">Others</label>
+              <textarea id="others" rows="4" cols="50" class="form-control"></textarea>
+            </div>
+          </div>
+        </fieldset>
+        <!-- add a fieldset with legend value "Past history" and inside the fieldset, bootstrap grid with 4 rows and 1 column for small screens, and 2 row and 3 columns for medium and above, with each of the cells containing the following fields : yes or no field named "Prior surgery", yes or no field named "Recent hospitalization for similar complaint", yes or no field named "Prolonged hospitalization", yes or no field named "Previous Intubations",respectively-->
+        <fieldset>
+          <legend>Past history</legend>
+          <div class="row">
+            <div class="col-sm-12 col-md-6">
+              <label for="prior-surgery">Prior surgery</label><br>
+              <select id="prior-surgery" name="prior-surgery" class="form-control">
+                <option value="">Select...</option>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+              </select><br>
+            </div>
+            <div class="col-sm-12 col-md-6">
+              <label for="recent-hospitalization">Recent hospitalization for similar complaint</label><br>
+              <select id="recent-hospitalization" name="recent-hospitalization" class="form-control">
+                <option value="">Select...</option>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+              </select><br>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-12 col-md-6">
+              <label for="prolonged-hospitalization">Prolonged hospitalization</label><br>
+              <select id="prolonged-hospitalization" name="prolonged-hospitalization" class="form-control">
+                <option value="">Select...</option>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+              </select><br>
+            </div>
+            <div class="col-sm-12 col-md-6">
+              <label for="previous-intubations">Previous Intubations</label><br>
+              <select id="previous-intubations" name="previous-intubations" class="form-control">
+                <option value="">Select...</option>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+              </select><br>
+            </div>
+          </div>
+        </fieldset>
+        <!--add a fieldset with legend value "Drug history" and inside the fieldset, bootstrap grid with 4 rows and 1 column for small screens, and 2 row and 3 columns for medium and above, with each of the cells containing the following fields : text field named "Habits", yes or no field named "Smoking",   yes or no field named "Alcohol", yes or no field named "Recreational drugs",respectively-->
+        <fieldset>
+          <legend>Drug history</legend>
+          <div class="row">
+            <div class="col-sm-12 col-md-6">
+              <label for="habits">Habits</label><br>
+              <textarea id="habits" name="habits" rows="4" cols="50" class="form-control"></textarea>
+            </div>
+            <div class="col-sm-12 col-md-6">
+              <label for="smoking">Smoking</label><br>
+              <select id="smoking" name="smoking" class="form-control">
+                <option value="">Select...</option>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+              </select><br>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-12 col-md-6">
+              <label for="alcohol">Alcohol</label><br>
+              <select id="alcohol" name="alcohol" class="form-control" class="form-control">
+                <option value="">Select...</option>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+              </select><br>
+            </div>
+            <div class="col-sm-12 col-md-6">
+              <label for="recreational-drugs">Recreational drugs</label><br>
+              <select id="recreational-drugs" name="recreational-drugs" class="form-control">
+                <option value="">Select...</option>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+              </select><br>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+    </div>
+    <div class="tab-pane fade" id="view-details" role="tabpanel" aria-labelledby="view-details-tab">
+      <!-- Placeholder text for "View Details" tab -->
+      <table class="table" id="myTable">
+        <thead>
+          <tr class="myRow">
+            <th scope="col">Parameter Name</th>
+            <th scope="col">Parameter Value</th>
+          </tr>
+        </thead>
+        <tbody>
+        </tbody>
+      </table>
+      <button id="download">Download CSV</button>
+    </div>
+  </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+  <script src="js/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,12 @@
+.myRow {
+    background-color: grey;
+}
+
+.myRow:nth-child(even) {
+    background-color: white;
+}
+
+th {
+    background-color: #4CAF50;
+    color: white;
+}
